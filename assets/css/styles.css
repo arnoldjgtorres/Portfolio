@@ -1,0 +1,533 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+}
+
+main {
+  margin-left: 210px;
+  background-image: url(../images/bg.png);
+  background-repeat: repeat;
+  background-size: 35px;
+}
+
+/*
+.bg-overlay{
+  background-image: url(../images/bg.png);
+  background-repeat: repeat;
+  background-size: 35px;
+}
+*/
+.container {
+  /*remove all unset to avoid horizontal scroll bar
+  all: unset;
+  */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.section-separator {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  text-align: center;
+}
+
+.section-title {
+  background-color: #5c837a;
+  color: white;
+  height: 6rem;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  position: relative;
+}
+
+.section-title h2 {
+  font-size: 50px;
+  margin: 0;
+  position: absolute;
+  top: 20%;
+}
+
+/**********************
+            NAV
+  **********************/
+.active {
+  background-color: #c2bcbc;
+  color: white;
+}
+
+.sidenav {
+  height: 100%;
+  width: 210px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #f7f3f3;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav li {
+  width: 100%;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #684949;
+  text-align-last: left;
+  display: block;
+  width: 100%;
+  /*
+      .active{
+        background-color: rgb(0, 15, 1);
+
+        color: rgb(5, 0, 0);
+      }
+      */
+}
+
+.sidenav a:hover {
+  color: #e6dbdb;
+  background-color: #b69999;
+}
+
+.sidenav .icon {
+  padding: 15px;
+}
+
+.sidenav .fa-user {
+  color: green;
+}
+
+.sidenav .fa-chart-bar {
+  color: blue;
+}
+
+.sidenav .fa-project-diagram {
+  color: purple;
+}
+
+.sidenav .fa-university {
+  color: orange;
+}
+
+.sidenav .fa-address-card {
+  color: indigo;
+}
+
+#top-nav-item {
+  padding: 0;
+  height: 7rem;
+  text-align: center;
+  color: #818181;
+  padding-bottom: 5rem;
+}
+
+#my-name {
+  font-size: 2rem;
+  display: inline-block;
+}
+
+/***********************
+          HOME
+  *********************/
+.img-overlay {
+  background-image: url(../images/image.jpg);
+  background-size: cover;
+  height: 45rem;
+}
+
+.promo {
+  font-size: 20px;
+}
+
+.name {
+  font-size: 40px;
+}
+
+.contact-list {
+  font-size: 20px;
+}
+
+#github {
+  font-size: 30px;
+}
+
+.center {
+  text-align: center;
+}
+
+.home-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.home-container .header-info {
+  padding-top: 5rem;
+  color: #fafafa;
+}
+
+.home-container .header-info a {
+  color: #89d3f0;
+}
+
+.home-container .header-info ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.home-container .img-border {
+  padding-top: 4rem;
+}
+
+.home-container .img-border img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 3px solid #575454;
+  height: 350px;
+  width: 290px;
+}
+
+/*****************
+      ABOUT
+ *****************/
+.about-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.about-inner {
+  background-color: white;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  text-align: center;
+  width: 45rem;
+}
+
+.about-inner .about-text {
+  font-size: 22px;
+}
+
+#anim-img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 5%;
+}
+
+/*****************
+        SKILLS
+  *****************/
+.skills-container {
+  display: inline-block;
+  width: 100%;
+  padding: 2%;
+}
+
+.professional-skills {
+  width: 85%;
+  display: inline-block;
+  background-color: white;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+
+.professional-skills hr {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+}
+
+.skills-icons {
+  margin: 0 auto;
+  max-height: 100px;
+  padding-bottom: 10px;
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.each-webdev {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.each-webdev div {
+  display: inline-block;
+}
+
+/*****************
+      Projects
+*****************/
+.waves-effect.waves-blue .waves-ripple {
+  /* The alpha value allows the text and background color
+     of the button to still show through. */
+  background-color: rgba(33, 150, 243, 0.2);
+}
+
+.card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.card {
+  width: 22.5rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  /*
+    li a {
+      margin-right: 0;
+      color: #333;
+      border-bottom: 2px solid #ffab40;
+
+      &:hover{
+        color: #333;
+        font-weight: 500;
+      }
+    }
+    */
+}
+
+.card:hover {
+  -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card .card-image img {
+  height: 280px;
+}
+
+.card .card-content {
+  padding-bottom: 30px;
+}
+
+.card .card-content p {
+  text-align: center;
+  padding: 5px 0 0;
+}
+
+.card .card-reveal {
+  text-align: left;
+}
+
+.card .card-reveal .card-title {
+  font-size: 28px;
+}
+
+.card .card-reveal li {
+  text-align: left;
+  margin-left: 10%;
+  list-style-type: square;
+}
+
+/********************
+      Education
+*********************/
+.card-education {
+  background-color: white;
+  width: 55rem;
+  height: 20rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+
+.card-education .education-content {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 65%;
+          flex: 0 0 65%;
+  padding-top: 5%;
+  margin-top: 5%;
+}
+
+.card-education .education-content .school-title {
+  font-size: 2.5rem;
+}
+
+.card-education .education-content p {
+  font-size: 1.3rem;
+}
+
+.card-education .education-pic {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-top: 5%;
+}
+
+.course-list {
+  background-color: white;
+  width: 55rem;
+  height: 20rem;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+
+/******************
+    Contact
+******************/
+.contact-container {
+  display: inline-block;
+  text-align: left;
+  padding-bottom: 34.5rem;
+}
+
+.contact-container .contact-method {
+  padding-bottom: 2%;
+}
+
+.contact-container .contact-method .circle-icon {
+  background: #248f4d;
+  padding: 20px;
+  color: white;
+  font-size: 24px;
+  border-radius: 50%;
+}
+
+.contact-container .contact-method a {
+  font-size: 22px;
+  color: #062906;
+}
+
+.contact-container .contact-method a:hover {
+  color: #8275a5;
+}
+
+/*******************
+        Footer
+  ******************/
+#footer {
+  background-color: #40474e;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  position: relative;
+  height: 5.8rem;
+  clear: both;
+}
+
+/*
+    @media(min-width: 756px){
+      .card-container{
+        display: flex;
+        justify-content: center;
+      }
+    
+    }
+    */
+@media screen and (max-width: 600px) {
+  .sidenav a:not(:first-child) {
+    display: none;
+  }
+  .sidenav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 823px) {
+  .home-container .header-info {
+    padding: 0;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    color: #fafafa;
+  }
+  .home-container .img-border {
+    margin-top: -15%;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    padding: 0;
+  }
+  .home-container .img-border img {
+    vertical-align: top;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+
+/* The "responsive" class is added to the sidenav with JavaScript when the user clicks on the icon. This class makes the sidenav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .sidenav.responsive {
+    position: relative;
+  }
+  .sidenav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .sidenav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
