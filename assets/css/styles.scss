@@ -137,9 +137,10 @@ main {
           HOME
   *********************/
 .img-overlay {
-  background-image: url(../images/image.jpg);
+  background-image: url(../images/image2.jpg);
   background-size: cover;
   height: 45rem;
+  width: auto;
 }
 .promo {
   font-size: 20px;
@@ -165,9 +166,19 @@ main {
   justify-content: space-evenly;
   align-items: center;
   align-content: center;
+
   .header-info {
     padding-top: 5rem;
-    color: rgb(250, 250, 250);
+    color: rgb(255, 255, 255);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-weight: bold;
+
+    .name {
+      font-weight: bold;
+    }
+    .position {
+      font-weight: bold;
+    }
 
     a {
       color: rgb(137, 211, 240);
@@ -184,8 +195,9 @@ main {
     img {
       object-fit: cover;
       border: 3px solid rgb(87, 84, 84);
-      height: 350px;
+      height: 430px;
       width: 290px;
+      transform: scale(0.75);
     }
   }
 }
@@ -350,6 +362,7 @@ main {
   transition: 0.3s;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
+  margin-bottom: 5%;
 
   .education-content {
     flex: 0 0 65%;
@@ -370,14 +383,31 @@ main {
   }
 }
 
-.course-list {
+.school-courses {
   background-color: white;
   width: 55rem;
-  height: 20rem;
+
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
+
+  .course-list {
+    margin-left: 6%;
+    display: flex;
+    flex-flow: row wrap;
+
+    ul {
+      column-count: 2;
+      text-align: right;
+      margin-right: 10%;
+      .uci-class {
+        a {
+          transform: scale(0.5);
+        }
+      }
+    }
+  }
 }
 
 /******************
@@ -459,6 +489,28 @@ main {
         vertical-align: top;
         transform: scale(0.8);
       }
+    }
+  }
+
+  .card-education {
+    display: flex;
+
+    .education-content {
+      flex: 0 0 65%;
+      padding-top: 5%;
+      margin-top: 5%;
+
+      .school-title {
+        font-size: 2.5rem;
+      }
+
+      p {
+        font-size: 1.3rem;
+      }
+    }
+    .education-pic {
+      flex: 1;
+      padding-top: 5%;
     }
   }
 }

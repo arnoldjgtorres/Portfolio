@@ -142,9 +142,10 @@ main {
           HOME
   *********************/
 .img-overlay {
-  background-image: url(../images/image.jpg);
+  background-image: url(../images/image2.jpg);
   background-size: cover;
   height: 45rem;
+  width: auto;
 }
 
 .promo {
@@ -185,7 +186,17 @@ main {
 
 .home-container .header-info {
   padding-top: 5rem;
-  color: #fafafa;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-weight: bold;
+}
+
+.home-container .header-info .name {
+  font-weight: bold;
+}
+
+.home-container .header-info .position {
+  font-weight: bold;
 }
 
 .home-container .header-info a {
@@ -206,8 +217,10 @@ main {
   -o-object-fit: cover;
      object-fit: cover;
   border: 3px solid #575454;
-  height: 350px;
+  height: 430px;
   width: 290px;
+  -webkit-transform: scale(0.75);
+          transform: scale(0.75);
 }
 
 /*****************
@@ -395,6 +408,7 @@ main {
   transition: 0.3s;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
+  margin-bottom: 5%;
 }
 
 .card-education .education-content {
@@ -420,16 +434,38 @@ main {
   padding-top: 5%;
 }
 
-.course-list {
+.school-courses {
   background-color: white;
   width: 55rem;
-  height: 20rem;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   -webkit-transition: 0.3s;
   transition: 0.3s;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
+}
+
+.school-courses .course-list {
+  margin-left: 6%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.school-courses .course-list ul {
+  -webkit-column-count: 2;
+          column-count: 2;
+  text-align: right;
+  margin-right: 10%;
+}
+
+.school-courses .course-list ul .uci-class a {
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
 }
 
 /******************
@@ -511,6 +547,30 @@ main {
     vertical-align: top;
     -webkit-transform: scale(0.8);
             transform: scale(0.8);
+  }
+  .card-education {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .card-education .education-content {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 65%;
+            flex: 0 0 65%;
+    padding-top: 5%;
+    margin-top: 5%;
+  }
+  .card-education .education-content .school-title {
+    font-size: 2.5rem;
+  }
+  .card-education .education-content p {
+    font-size: 1.3rem;
+  }
+  .card-education .education-pic {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding-top: 5%;
   }
 }
 
