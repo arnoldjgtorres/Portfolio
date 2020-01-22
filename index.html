@@ -16,15 +16,19 @@
        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-        
+        <script type="text/javascript" src="menu.js?1234"></script>
+
         <link rel="stylesheet" href="assets/css/styles.css">
         <link rel="stylesheet" href="assets/css/responsive.css">    
     </head>
 
     <body data-spy="scroll" data-target=".sidenav">
 
-        <nav class="sidenav">   
+        <nav id="sidenav" class="sidenav">   
                 <ul id="mainNav">
+                    <li id='close-menu'>
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    </li>
                     <li>
                         <div id="top-nav-item">
                             <a href="#home" class="nav-item ">
@@ -66,6 +70,8 @@
                             <i class="icon far fa-address-card"></i> Contact
                         </a>
                     </li>
+                   
+                  
                 </ul>
             </nav>
     
@@ -77,10 +83,11 @@
         ===================
         -->
         <main>
+        <span id="sub-menu" onclick="openNav()">&#9776; Arnold Torres</span>
         <section class="home" id="home">
             <div class="img-overlay">
                 <div class="container">
-                    <div class="section-separator">
+                    <div id="home-section" class="section-separator">
                        
                             <div class="home-container">
                                 <div class="header-info">
@@ -751,7 +758,38 @@ github: https://github.com/arnoldjgtorres
 
   
    
+    <script>
+        function openNav() {
+          document.getElementById("sidenav").style.width = "210px";
+        }
+        
+        function closeNav() {
+          document.getElementById("sidenav").style.width = "0";
+        }
+        </script>
+
+    <script>
+        $(window).resize(function(){
+        if($(window).width() > 808){
+            document.getElementById("sidenav").style.width = "210px";
+            console.log("BELOW 823");
+        }
+        else{
+            document.getElementById("sidenav").style.width = "0px";
+            console.log("ABOVE 823")
+        }
+    });
+    </script>
+
+<script>
+    function openNav() {
+      document.getElementById("sidenav").style.width = "210px";
+    }
     
+    function closeNav() {
+      document.getElementById("sidenav").style.width = "0";
+    }
+</script>
 
     <script type="text/JavaScript">
         document.getElementById("copyright").innerHTML = new Date().getFullYear();

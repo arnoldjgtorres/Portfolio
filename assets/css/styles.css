@@ -6,6 +6,10 @@ body {
   position: relative;
 }
 
+#sub-menu {
+  display: none;
+}
+
 main {
   margin-left: 210px;
   background-image: url(../images/bg.png);
@@ -67,12 +71,16 @@ main {
   height: 100%;
   width: 210px;
   position: fixed;
-  z-index: 1;
+  z-index: 3;
   top: 0;
   left: 0;
   background-color: #f7f3f3;
   overflow-x: hidden;
   padding-top: 20px;
+}
+
+.sidenav #close-menu {
+  display: none;
 }
 
 .sidenav li {
@@ -168,6 +176,11 @@ main {
   text-align: center;
 }
 
+#home-section {
+  padding-top: 7%;
+  padding-bottom: 0;
+}
+
 .home-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -200,7 +213,7 @@ main {
 }
 
 .home-container .header-info a {
-  color: #89d3f0;
+  color: #c4d5f5;
 }
 
 .home-container .header-info ul {
@@ -217,6 +230,7 @@ main {
   -o-object-fit: cover;
      object-fit: cover;
   border: 3px solid #575454;
+  border-radius: 10px;
   height: 430px;
   width: 290px;
   -webkit-transform: scale(0.75);
@@ -520,33 +534,95 @@ main {
     
     }
     */
-@media screen and (max-width: 600px) {
-  .sidenav a:not(:first-child) {
-    display: none;
+@media screen and (max-width: 900px) {
+  .card-education {
+    width: 90%;
   }
-  .sidenav a.icon {
-    float: right;
-    display: block;
+  .card-education .education-pic {
+    margin-left: -8%;
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+  .about-inner {
+    width: 90%;
+  }
+  .school-courses {
+    width: 90%;
   }
 }
 
-@media screen and (max-width: 823px) {
-  .home-container .header-info {
-    padding: 0;
+@media screen and (max-width: 843px) {
+  .about-img {
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+  }
+  .img-overlay {
+    height: 75%;
+  }
+  #home-section {
+    padding-top: 0;
+    padding-bottom: 0;
+    text-align: center;
+  }
+  .home-container {
     -webkit-transform: scale(0.8);
             transform: scale(0.8);
-    color: #fafafa;
+  }
+  .home-container .header-info {
+    padding-top: 5%;
+  }
+  .home-container .header-info .promo {
+    font-size: 24px;
+  }
+  .home-container .header-info .name {
+    font-size: 30px;
+  }
+  .home-container .header-info .position {
+    font-size: 30px;
   }
   .home-container .img-border {
-    margin-top: -15%;
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8);
-    padding: 0;
+    padding-top: 0;
   }
   .home-container .img-border img {
-    vertical-align: top;
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8);
+    -o-object-fit: cover;
+       object-fit: cover;
+    border: 3px solid #575454;
+    height: 430px;
+    width: 290px;
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+  }
+  .about-inner {
+    width: 83%;
+  }
+}
+
+@media screen and (max-width: 825px) {
+  main {
+    margin-left: 0px;
+  }
+  .sidenav {
+    width: 0px;
+  }
+  .sidenav #close-menu {
+    display: block;
+    height: 50%;
+  }
+  .sidenav #close-menu a {
+    color: black;
+  }
+  #sub-menu {
+    font-size: 28px;
+    cursor: pointer;
+    display: block;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    background-color: #ddd7d7;
+    color: black;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
   }
   .card-education {
     display: -webkit-box;
@@ -566,16 +642,15 @@ main {
   .card-education .education-content p {
     font-size: 1.3rem;
   }
-  .card-education .education-pic {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-    padding-top: 5%;
-  }
 }
 
 /* The "responsive" class is added to the sidenav with JavaScript when the user clicks on the icon. This class makes the sidenav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 600px) {
+  .card-education .education-pic {
+    margin-left: -10%;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
   .sidenav.responsive {
     position: relative;
   }
